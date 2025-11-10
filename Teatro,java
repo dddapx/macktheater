@@ -9,7 +9,8 @@ public class Teatro{
     }
 
     public void novaCompra(){
-
+         carrinho = new Pedido(); 
+    System.out.println("Nova compra");
     }
 
     public void apresentaEspetaculos(){

@@ -4,6 +4,7 @@ public class Cliente {
     //lista de clientes(?)
     private String nome;
     private String cpf;
+    private Pedido pedido;
 
     public Cliente (String nome, String cpf){
         this.nome = nome;
@@ -21,7 +22,15 @@ public class Cliente {
     public void setCpf(String cpf){
         this.cpf = cpf;
     }
-    public void adicionaPedido(Pedido pedido){
+
+    //retorna o pedido
+    public Pedido getPedido() {
+        return pedido;
+    }
+
+    public void adicionarPedido(Pedido pedido) {
+    this.pedido = pedido;    
+}
         
     }
 }

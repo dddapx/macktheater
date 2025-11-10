@@ -13,16 +13,37 @@ public class Espetaculo {
         this.data = data;
         this.hora = hora;
         this.preco = preco;
+        this.assentos = new boolean[50];
     }
 
     public void apresentaAssentos (){
+        System.out.println("||| Assentos Disponíveis |||");
+        for (int i =assentos.length - 1; i>=0; i--); //negativo pq n ta add ta tirando e começa de tras p frente
+        if(assentos[i] ){
+            System.out.print("XX"); //ocupado
+        }else{
+            System.out.print((i + 1) + "  "); //livre
+        }
 
+        if (i % 10 == 0) { //pra ter 10 fileiras ai tem condição de i divido por 10 resto 0 da ln
+            System.out.println();
+}
     }
 
     public Entrada novaEntrada (int tipo, int assento){
+        if(assento<1 || assento>50){
+            System.out.print("INVALIDO TENTE DE NOVO!");
+            return null;
+        }
+        if(assentos [assento -1]){
+            System.out.println("ASSENTO OCUPADO!");
+            return null;
+        }
 
+
+
+        
     }
-
     public double getPreco (){
         return preco;
     }
