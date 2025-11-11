@@ -32,18 +32,30 @@ public class Espetaculo {
 
     public Entrada novaEntrada (int tipo, int assento){
         if(assento<1 || assento>50){
-            System.out.print("INVALIDO TENTE DE NOVO!");
+            System.out.print("INVALIDO. TENTE DE NOVO.");
             return null;
         }
         if(assentos [assento -1]){
             System.out.println("ASSENTO OCUPADO!");
             return null;
         }
-
-
-
-        
+    
+    this.assentos[assento - 1] = true; 
+    
+    if (tipo == 1) {
+        return new EntradaInteira(this.preco, assento); 
+    } else if (tipo == 2) {
+        return new EntradaMeia(this.preco, assento); 
+    } else if (tipo == 3) {
+        return new EntradaProfessor(this.preco, assento); 
+    
+    } else {
+        System.out.println("Tipo de entrada inválido!");
+        this.assentos[assento - 1] = false;
+        return null;
     }
+    }
+    
     public double getPreco (){
         return preco;
     }

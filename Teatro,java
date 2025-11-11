@@ -3,6 +3,8 @@
 public class Teatro{
     private Pedido carrinho = null;
     private Espetaculo espetaculoSelecionado = null;
+    List<Espetaculo> espetaculos;
+    List<Cliente> clientes;
 
     public Teatro(){
 

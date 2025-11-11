@@ -20,7 +20,7 @@ public class Pedido {
     public double calculaValorTotal(){
         double total = 0;
         for (Entrada e : entradas) {
-            total += e.getPreco(); 
+            total += e.calculaValor(); 
         }
         return total;
     }
