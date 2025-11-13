@@ -10,6 +10,8 @@ public abstract class Entrada {
         this.precoBase = precoBase;
         this.numeroDoAssento = numeroDoAssento;
     }
-
+    public int getNumeroDoAssento() { //como o cliente vai saber o numero do assento? por isso coloquei mas pesquiseie nao necessariamente um get precisa estar explicito na uml
+        return numeroDoAssento;
+    }
     public abstract double calculaValor();
 }

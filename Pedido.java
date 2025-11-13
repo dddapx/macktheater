@@ -4,11 +4,13 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Pedido {
-    public Pedido(){
-        private List<Entrada> entradas;
 
-    // Construtor
+public class Pedido {
+
+    
+    private List<Entrada> entradas;  /*varios pedidos */
+
+  
     public Pedido() {
         entradas = new ArrayList<>();
     }
@@ -17,10 +19,11 @@ public class Pedido {
         entradas.add(entrada);
     }
 
-    public double calculaValorTotal(){
+
+public double calculaValorTotal(){
         double total = 0;
         for (Entrada e : entradas) {
-            total += e.getPreco(); 
+            total += e.calculaValor();
         }
         return total;
     }

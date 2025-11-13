@@ -1,10 +1,13 @@
 /* Nome e RA: Lara Arthuso 10444811, FELIPE PRIOSTE 10418916, DAVI PAIVA 10385766 */
-
+import java.util.ArrayList;
+import java.util.List; /*mais de um pedido*/
 public class Cliente {
     //lista de clientes(?)
     private String nome;
     private String cpf;
-    private Pedido pedido;
+
+    private List<Pedido> pedidos = new ArrayList<>();
+
 
     public Cliente (String nome, String cpf){
         this.nome = nome;
@@ -23,14 +26,8 @@ public class Cliente {
         this.cpf = cpf;
     }
 
-    //retorna o pedido
-    public Pedido getPedido() {
-        return pedido;
-    }
-
     public void adicionarPedido(Pedido pedido) {
-    this.pedido = pedido;    
-}
-        
+        pedidos.add(pedido);
     }
 }
+

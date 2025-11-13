@@ -1,63 +1,83 @@
 /* Nome e RA: Lara Arthuso 10444811, FELIPE PRIOSTE 10418916, DAVI PAIVA 10385766 */
 
 public class Espetaculo {
-    //lista de espetaculos (?)
+
     private String nome;
     private String data;
     private String hora;
     private double preco;
-    private boolean[] assentos = new boolean[50];
+    private boolean[] assentos;
 
-    public Espetaculo (String nome, String data, String hora, double preco){
+    public Espetaculo(String nome, String data, String hora, double preco) {
         this.nome = nome;
         this.data = data;
         this.hora = hora;
         this.preco = preco;
-        this.assentos = new boolean[50];
+        this.assentos = new boolean[50]; // false = livre
     }
 
-    public void apresentaAssentos (){
+    public void apresentaAssentos() {
         System.out.println("||| Assentos Disponíveis |||");
-        for (int i =assentos.length - 1; i>=0; i--); //negativo pq n ta add ta tirando e começa de tras p frente
-        if(assentos[i] ){
-            System.out.print("XX"); //ocupado
-        }else{
-            System.out.print((i + 1) + "  "); //livre
-        }
 
-        if (i % 10 == 0) { //pra ter 10 fileiras ai tem condição de i divido por 10 resto 0 da ln
-            System.out.println();
-}
+        for (int i = assentos.length - 1; i >= 0; i--) {
+
+            if (assentos[i]) {
+                System.out.print("XX "); // ocupados
+            } else {
+                System.out.print((i + 1) + "  "); // livres
+            }
+
+            //quebra a linha a cada 10 assentos com div
+            if (i % 10 == 0) {
+                System.out.println();
+            }
+        }
     }
 
-    public Entrada novaEntrada (int tipo, int assento){
-        if(assento<1 || assento>50){
-            System.out.print("INVALIDO TENTE DE NOVO!");
+    public Entrada novaEntrada(int tipo, int assento) {
+        if (assento < 1 || assento > 50) {
+            System.out.println("ASSENTO INVÁLIDO, TENTE DE NOVOO!");
             return null;
         }
-        if(assentos [assento -1]){
+
+        if (assentos[assento - 1]) {
             System.out.println("ASSENTO OCUPADO!");
             return null;
         }
 
+        Entrada e = null;
 
+        switch (tipo) {
+            case 1:
+                e = new EntradaInteira(preco, assento);
+                break;
+            case 2:
+                e = new EntradaMeia(preco, assento);
+                break;
+            default:
+                System.out.println("TIPO DE ENTRADA INVÁLIDO!");
+                return null;
+        }
 
-        
+        marcarAssento(assento);
+        return e;
     }
-    public double getPreco (){
+
+    private void marcarAssento(int assento) {
+        assentos[assento - 1] = true;
+    }
+
+    public double getPreco() {
         return preco;
     }
 
     @Override
-    public String toString(){
-        return "*** CADASTRO DE ESPETÁCULO ***\r\n" + //
-                        "Nome do Espetáculo: "+nome\r\n + //
-                        "Data: "+data\r\n + //
-                        "Hora: "+hora\r\n + //
-                        "Preço da Entrada Inteira: "+preco;
-    }
-
-    private void marcarAssento(int assento){
-        
+    public String toString() {
+        return "CADASTRO DE ESPETÁCULO" +
+               "Nome: " + nome + "\n" +
+               "Data: " + data + "\n" +
+               "Hora: " + hora + "\n" +
+               "Preço da Entrada Inteira: " + preco;
     }
 }
+
