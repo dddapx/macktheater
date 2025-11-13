@@ -5,22 +5,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Pedido {
-    public Pedido(){
-        private List<Entrada> entradas;
+    
+    private List<Entrada> entradas;
 
-    // Construtor
     public Pedido() {
         entradas = new ArrayList<>();
     }
 
-    public void adicionaEntrada(Entrada entrada){
+    public void adicionaEntrada(Entrada entrada) {
         entradas.add(entrada);
     }
 
-    public double calculaValorTotal(){
+    public double calculaValorTotal() {
         double total = 0;
-        for (Entrada e : entradas) {
-            total += e.calculaValor(); 
+        for (int i = 0; i < entradas.size(); i++) {
+            Entrada e = entradas.get(i); 
+            total += e.calculaValor();
         }
         return total;
     }

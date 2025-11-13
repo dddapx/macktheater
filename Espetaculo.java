@@ -61,6 +61,18 @@ public class Espetaculo {
     public double getPreco() {
         return preco;
     }
+    
+    public String getNome() {
+        return nome;
+    }
+
+    public String getData() {
+        return data;
+    }
+
+    public String getHora() {
+        return hora;
+    }
 
     @Override
     public String toString() {
