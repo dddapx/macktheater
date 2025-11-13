@@ -1,3 +1,4 @@
+/* Nome e RA: Lara Arthuso 10444811, FELIPE PRIOSTE 10418916, DAVI PAIVA 10385766 */
 import java.util.ArrayList;
 import java.util.Scanner;
 public class Teatro {

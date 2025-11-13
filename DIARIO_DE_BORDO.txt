@@ -1,7 +1,0 @@
-1. Para o grupo, a parte mais difícil do projeto foi o uso do loop for, principalmente no item 5, que tratava da finalização da venda e da impressão da nota fiscal. Essa etapa acabou 
-sendo mais complicada do que imaginávamos. A lógica pode até parecer simples para quem já está acostumado a trabalhar com estruturas aninhadas, como if dentro de for e assim por diante,
-mas pensar e estruturar isso do zero, além de ter confiança de que estava certo, foi um desafio.
-
-2. Em relação ao uso de inteligência artificial, sim, utilizamos em alguns momentos. Principalmente quando não conhecíamos a sintaxe correta, como na parte de mostrar a hora em que a 
-nota fiscal foi impressa, ou quando algum trecho parecia complicado demais para termos certeza se estava correto. Nesses casos, a IA funcionou mais como apoio para nos orientar na 
-direção certa, e não como uma solução pronta.
