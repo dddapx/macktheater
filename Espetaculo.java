@@ -1,5 +1,4 @@
 /* Nome e RA: Lara Arthuso 10444811, FELIPE PRIOSTE 10418916, DAVI PAIVA 10385766 */
-
 public class Espetaculo {
 
     private String nome;
@@ -69,6 +68,18 @@ public class Espetaculo {
 
     public double getPreco() {
         return preco;
+    }
+    
+    public String getNome() {
+        return nome;
+    }
+
+    public String getData() {
+        return data;
+    }
+
+    public String getHora() {
+        return hora;
     }
 
     @Override

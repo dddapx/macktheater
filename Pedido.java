@@ -15,7 +15,7 @@ public class Pedido {
         entradas = new ArrayList<>();
     }
 
-    public void adicionaEntrada(Entrada entrada){
+    public void adicionaEntrada(Entrada entrada) {
         entradas.add(entrada);
     }
 

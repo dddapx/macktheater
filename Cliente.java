@@ -29,5 +29,6 @@ public class Cliente {
     public void adicionarPedido(Pedido pedido) {
         pedidos.add(pedido);
     }
+        
 }
 
